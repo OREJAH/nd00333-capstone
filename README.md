@@ -1,6 +1,7 @@
 NOTE: This file is a template that you can use to create the README for your project. The TODO comments below will highlight the information you should be sure to include.
 
-Your Project Title Here
+#  CAPSTONE PROJECT
+
 TODO: Write a short introduction to your project.
 
 Project Set Up and Installation
