@@ -3,18 +3,13 @@ import pickle
 import json
 import numpy
 from sklearn.externals import joblib
-from sklearn.linear_model import Ridge
-import time
 
 def init():
     global model
-    #Print statement for appinsights custom traces:
-    print ("model initialized" + time.strftime("%H:%M:%S"))
-
-    # AZUREML_MODEL_DIR is an environment variable created during deployment.
+   # AZUREML_MODEL_DIR is an environment variable created during deployment.
     # It is the path to the model folder (./azureml-models/$MODEL_NAME/$VERSION)
     # For multiple models, it points to the folder containing all deployed models (./azureml-models)
-    model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), 'sklearn_classification_model.pkl')
+    # model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), 'sklearn_classification_model.pkl')
 
     # deserialize the model file back into a sklearn model
     model = joblib.load(model_path)
@@ -26,10 +21,8 @@ def run(raw_data):
         data = json.loads(raw_data)['data']
         data = numpy.array(data)
         result = model.predict(data)
-        print ("Prediction created" + time.strftime("%H:%M:%S"))
         # you can return any datatype as long as it is JSON-serializable
         return result.tolist()
     except Exception as e:
         error = str(e)
-        print (error + time.strftime("%H:%M:%S"))
         return error
