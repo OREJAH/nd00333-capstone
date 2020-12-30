@@ -52,10 +52,7 @@ Note: If you choose to work with any other external dataset, before choosing a t
 
 •	Train a model with HyperDrive: The hyperparameter_tuning.ipynb file contains some starter codes to help you train a model and perform hyperparameter tuning using HyperDrive.
 
-
-
-Before you start working on your project, make sure that your Azure ML Studio Workspace is set up. Here are the main things that you need to do:
-To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
+•	Model Deployment: After you have trained your models. You will have to deploy your best model as a webservice and test the model endpoint.
 
 ## Dataset
 
