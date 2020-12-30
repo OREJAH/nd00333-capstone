@@ -8,6 +8,31 @@
 
 ### Project Set Up
 
+•	Set up your workspace: Create a new workspace, if you haven’t already.
+
+•	Set up your Azure Development Environment: Create a compute instance VM to run jupyter notebooks.
+
+•	Download starter files: These files have some boilerplate code and TODOs that will help you start working on your project. You can find them in this link: 
+
+•	Choose a dataset:  Working with Kaggle heart failure dataset, it can be found in the link:  
+
+Note: If you choose to work with any other external dataset, before choosing a task and dataset, make sure that it is supported by Azure ML's automl API.
+
+•	Train a model using Automated ML: The automl.ipynb file contains a starter code to help you train a model using Automated ML. 
+
+•	Train a model with HyperDrive: The hyperparameter_tuning.ipynb file contains some starter codes to help you train a model and perform hyperparameter tuning using HyperDrive.
+
+
+
+
+
+
+
+
+
+
+Set up workspace. Set up your Azure Development Environment
+Before you start working on your project, make sure that your Azure ML Studio Workspace is set up. Here are the main things that you need to do:
 To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
 
 ## Dataset
