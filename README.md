@@ -1,16 +1,16 @@
 #  CAPSTONE PROJECT
-# . Table of Contents
+#  Table of Contents
 
-## . Project Overview
+## . ## Project Overview
 
-## . Project Set Up
+## . ## Project Set Up
 
-## . Dataset
-   ### - Overview
-   ### - Task
-   ### - Access
+## . ## Dataset
+   #### - Overview
+   #### - Task
+   #### - Access
    
-## . Automated ML
+## . ## Automated ML
 
 
 ## Project overview
