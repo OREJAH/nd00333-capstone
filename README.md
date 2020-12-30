@@ -16,13 +16,13 @@
            - Settings
            - Configuration
 
-   ### - Results
+   ###  Results
    
 ## . Hyperparameter Tuning   
           - Model
           - Parameters
           
-   ### - Results
+   ###  Results
    
 ## . Model Deployment
 
