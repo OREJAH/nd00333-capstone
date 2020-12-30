@@ -1,4 +1,17 @@
 #  CAPSTONE PROJECT
+# Table of Contents
+
+# Project Overview
+
+# Project Set Up
+
+# Dataset
+   ## - Overview
+   ## - Task
+   ## - Access
+   
+# Automated ML
+
 
 ## Project overview
 
@@ -24,14 +37,6 @@ Note: If you choose to work with any other external dataset, before choosing a t
 
 
 
-
-
-
-
-
-
-
-Set up workspace. Set up your Azure Development Environment
 Before you start working on your project, make sure that your Azure ML Studio Workspace is set up. Here are the main things that you need to do:
 To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
 
