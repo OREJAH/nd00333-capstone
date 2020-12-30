@@ -12,9 +12,9 @@
 
 •	Set up your Azure Development Environment: Create a compute instance VM to run jupyter notebooks.
 
-•	Download starter files: These files have some boilerplate code and TODOs that will help you start working on your project. You can find them in this link: 
+•	Download starter files: These files have some boilerplate code and TODOs that will help you start working on your project. You can find them in this link: https://github.com/udacity/nd00333-capstone/tree/master/starter_file
 
-•	Choose a dataset:  Working with Kaggle heart failure dataset, it can be found in the link:  
+•	Choose a dataset:  Working with Kaggle heart failure dataset, it can be found in the link: https://www.kaggle.com/andrewmvd/heart-failure-clinical-data/download
 
 Note: If you choose to work with any other external dataset, before choosing a task and dataset, make sure that it is supported by Azure ML's automl API.
 
