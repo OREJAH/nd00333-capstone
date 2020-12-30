@@ -1,13 +1,13 @@
 #  CAPSTONE PROJECT
 
-### Project overview
+## Project overview
 
   This project will demonstrate my ability to use an external dataset in Azure workspace, train a model using the different tools available in the AzureML framework as well as my ability to deploy the model as a web service. I'll create a machine learning model that can assess the likelihood of a death by heart failure event. In this project, I will create two models: one using Automated ML (denoted as AutoML from now on) and one customized model whose hyperparameters are tuned using HyperDrive. I will then compare the performance of both the models and deploy the best performing model. I will lastly enable logging in my deloyed web app, this will log useful data about the requests being sent to the webapp including the inference time and the time at which the request arrived.
 
 ### Project Set Up and Installation
 OPTIONAL: If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
 
-# Dataset
+## Dataset
 
 ### Overview
 
