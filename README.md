@@ -1,4 +1,5 @@
 #  CAPSTONE PROJECT
+
 #  Table of Contents
 
 ## . Project Overview
@@ -12,14 +13,14 @@
    ### - Access
    
 ## . Automated ML
-          #### - Settings
-          ####- Configuration
+           - Settings
+           - Configuration
 
    ### - Results
    
 ## . Hyperparameter Tuning   
-          #### - Model
-          #### - Parameters
+          - Model
+          - Parameters
           
    ### - Results
    
