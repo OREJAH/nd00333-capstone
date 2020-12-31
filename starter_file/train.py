@@ -11,7 +11,7 @@ from azureml.data.dataset_factory import TabularDatasetFactory
 
     # Clean data
     
-    def clean_data(data):
+    def clean_data(dataset):
 
     x_df = data.to_pandas_dataframe().dropna()
     y_df = x_df.pop("DEATH_EVENT")
