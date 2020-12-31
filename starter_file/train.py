@@ -32,13 +32,16 @@ def main():
 
     parser.add_argument('--C', type=float, default=1.0, help="Inverse of regularization strength. Smaller values cause stronger regularization")
     parser.add_argument('--max_iter', type=int, default=100, help="Maximum number of iterations to converge")
-
+    parser.add_argument('--min_samples_leaf', type=int, default=1, help="The minimum number of samples required to be at a leaf node.")
+    
     args = parser.parse_args()
 
     run.log("Regularization Strength:", np.float(args.C))
     run.log("Max iterations:", np.int(args.max_iter))
+    run.log("Min Samples Leaf:", np.int(args.min_samples_leaf))
 
-    model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_train)
+    
+    model = LogisticRegression(C=args.C, max_iter=args.max_iter, min_samples_leaf=args.min_samples_leaf).fit(x_train, y_train)
     
     accuracy = model.score(x_test, y_test)
     run.log("Accuracy", np.float(accuracy))
