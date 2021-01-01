@@ -7,10 +7,10 @@ import joblib
 
 def init():
     global model
-   # AZUREML_MODEL_DIR is an environment variable created during deployment.
+    # AZUREML_MODEL_DIR is an environment variable created during deployment.
     # It is the path to the model folder (./azureml-models/$MODEL_NAME/$VERSION)
     # For multiple models, it points to the folder containing all deployed models (./azureml-models)
-    model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), 'sklearn_classification_model.pkl')
+    model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), 'dataset.pkl')
     path = os.path.normpath(model_path)
     path_split = path.split(os.sep)
     log_server.update_custom_dimensions({'model_name': path_split[1], 'model_version': path_split[2]})
@@ -29,6 +29,7 @@ def init():
 # note you can pass in multiple rows for scoring
 def run(raw_data):
     try:
+        data = np.array(json.loads(data))
         result = model.predict(data)
         # you can return any datatype as long as it is JSON-serializable
         return result.tolist()
