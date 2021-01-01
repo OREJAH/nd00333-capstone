@@ -20,8 +20,7 @@ if key in ws.datasets.keys():
         dataset = ws.datasets[key] 
         
     # Clean data
-    
-    def clean_data(dataset):
+def clean_data(dataset):
 
     x_df = data.to_pandas_dataframe().dropna()
     y_df = x_df.pop("DEATH_EVENT")
