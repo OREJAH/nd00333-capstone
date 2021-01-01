@@ -9,32 +9,32 @@ scoring_uri = ''
 data = {"data":
         [
           {
-             "age": 40,
-            "anaemia": 0,
-            "creatinine_phosphokinase": 478,
-            "diabetes": 1,
-            "ejection_fraction": 30,
-            "high_blood_pressure": 0,
-            "platelets": 303000,
-            "serum_creatinine": 0.9,
-            "serum_sodium": 136,
+             "age": 90,
+            "anaemia": 1,
+            "creatinine_phosphokinase": 47,
+            "diabetes": 0,
+            "ejection_fraction": 40,
+            "high_blood_pressure": 1,
+            "platelets": 204000,
+            "serum_creatinine": 2.1,
+            "serum_sodium": 132,
             "sex": 1,
-            "smoking": 0,
-            "time": "148"
+            "smoking": 1,
+            "time": "8"
           },
           {
-            "age": 86,
-            "anaemia": 0,
-            "creatinine_phosphokinase": 582,
+            "age": 45,
+            "anaemia": 1,
+            "creatinine_phosphokinase": 981,
             "diabetes": 0,
-            "ejection_fraction": 38,
+            "ejection_fraction": 30,
             "high_blood_pressure": 0,
-            "platelets": 263358,
-            "serum_creatinine": 1.83,
-            "serum_sodium": 134,
-            "sex": 0,
+            "platelets": 136000,
+            "serum_creatinine": 1.1,
+            "serum_sodium": 137,
+            "sex": 1,
             "smoking": 0,
-            "time": "95"
+            "time": "11"
           },
       ]
     }
