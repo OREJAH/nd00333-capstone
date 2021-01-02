@@ -117,6 +117,9 @@ I could have improved the model through the use of Bayesian optimization algorit
 
 
 Model Deployment
+
+After training a model using Automated ML, the next thing is to deploy the best model as a webservice and test the model endpoint.
+
 TODO: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
 Screen Recording
@@ -125,5 +128,3 @@ TODO Provide a link to a screen recording of the project in action. Remember tha
 A working model
 Demo of the deployed model
 Demo of a sample request sent to the endpoint and its response
-Standout Suggestions
-TODO (Optional): This is where you can provide information about any standout suggestions that you have attempted.
