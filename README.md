@@ -86,10 +86,21 @@ TODO: What are the results you got with your automated ML model? What were the p
 
 TODO Remeber to provide screenshots of the RunDetails widget as well as a screenshot of the best model trained with it's parameters.
 
-Hyperparameter Tuning
-TODO: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
+### Hyperparameter Tuning
+ Give an overview of the types of parameters and their ranges used for the hyperparameter search
 
-Results
+I chose a custom-coded model — a standard Scikit-learn Logistic Regression for this experiment. Logistic Regression is a classification algorithm that is used to predict the probability of a categorical dependent variable. In the case of this capstone experiment, I chose the model because the decision boundary of logistic regression model is a linear binary classifier that seperate the two classes I want to predict using a hperdrive service.
+
+The parameters I used for the hyperparameter search are:
+
+Regularization Strength (C) with range 0.1 to 1.0 -- Inverse of regularization strength. Smaller values cause stronger regularization
+Max Iterations (max_iter) with values 50, 100, 150 and 200 -- Maximum number of iterations to converge.
+
+![parameters](https://github.com/OREJAH/nd00333-capstone/blob/master/starter_file/hyperparameters.PNG)
+![run in progress](https://github.com/OREJAH/nd00333-capstone/blob/master/starter_file/hyperdrive%20widgets%20in%20progress.PNG)
+![run completed](https://github.com/OREJAH/nd00333-capstone/blob/master/starter_file/hyperdrive%20widget.PNG)
+
+### Results
 TODO: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
 
 TODO Remeber to provide screenshots of the RunDetails widget as well as a screenshot of the best model trained with it's parameters.
