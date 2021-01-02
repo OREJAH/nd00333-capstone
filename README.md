@@ -78,6 +78,8 @@ Regarding the features, the creatinine phosphokinase (CPK) states the level of t
 
 I downloaded the Heart Failure Dataset from kaggle as a csv file, then i registered it in the Azure Workspace under Dataset as a Tabular dataset. Then uploaded it from the local files in my system. I also made it accessible in the jupyter notebook by using the code: dataset= Dataset.get_by_name(ws, name="heart-failure).
 
+![access dataset](https://github.com/OREJAH/nd00333-capstone/blob/master/starter_file/heart%20failure%20dataset.PNG)
+
 ### Automated ML
 TODO: Give an overview of the automl settings and configuration you used for this experiment
 
@@ -87,7 +89,6 @@ TODO: What are the results you got with your automated ML model? What were the p
 TODO Remeber to provide screenshots of the RunDetails widget as well as a screenshot of the best model trained with it's parameters.
 
 ### Hyperparameter Tuning
- Give an overview of the types of parameters and their ranges used for the hyperparameter search
 
 I chose a custom-coded model — a standard Scikit-learn Logistic Regression for this experiment. Logistic Regression is a classification algorithm that is used to predict the probability of a categorical dependent variable. In the case of this capstone experiment, I chose the model because the decision boundary of logistic regression model is a linear binary classifier that seperate the two classes I want to predict using a hperdrive service.
 
