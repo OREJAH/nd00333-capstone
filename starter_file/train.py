@@ -14,15 +14,16 @@ import joblib
 
 run = Run.get_context()
 
-    workspace = run.experiment.workspace
+workspace = run.experiment.workspace
+
     dataset_name = 'heart-failure'
     dataset = Dataset.get_by_name(workspace=workspace, name=dataset_name)
 
     df = dataset.to_pandas_dataframe()
 
     y = df.pop("DEATH_EVENT")
-
-         # Clean data
+    
+# Clean data
                 
 def clean_data(data):
 
@@ -38,7 +39,7 @@ x_train, x_test, y_train, y_test=train_test_split(x, y, train_size=0.8, test_siz
 
 
 def main():
-    # Add arguments to script
+# Add arguments to script
     
     parser = argparse.ArgumentParser()
 
