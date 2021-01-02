@@ -1,36 +1,41 @@
-from sklearn.linear_model import LogisticRegression
 import argparse
 import os
 import numpy as np
-from sklearn.metrics import mean_squared_error
-import joblib
-from sklearn.model_selection import train_test_split
 import pandas as pd
-from azureml.core.run import Run
-from azureml.data.dataset_factory import TabularDatasetFactory
+
+from sklearn.metrics import mean_squared_error, auc
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+
+from azureml.core.workspace import Workspace
+from azureml.core import Run, Dataset
+
+import joblib
 
 run = Run.get_context()
-ws = run.experiment.workspace
-found = False
-key = "heart-failure"
-description_text = "External data from kaggle"
 
-if key in ws.datasets.keys(): 
-        found = True
-        dataset = ws.datasets[key] 
-        
-    # Clean data
-def clean_data(dataset):
+    workspace = run.experiment.workspace
+    dataset_name = 'heart-failure'
+    dataset = Dataset.get_by_name(workspace=workspace, name=dataset_name)
+
+    df = dataset.to_pandas_dataframe()
+
+    y = df.pop("DEATH_EVENT")
+
+         # Clean data
+                
+def clean_data(data):
 
     x_df = data.to_pandas_dataframe().dropna()
     y_df = x_df.pop("DEATH_EVENT")
     return x_df, y_df
 
 X, y = clean_data(dataset)
-
+        
 # TODO: Split data into train and test sets.
 
 x_train, x_test, y_train, y_test=train_test_split(x, y, train_size=0.8, test_size=0.2, random_state=42)
+
 
 def main():
     # Add arguments to script
