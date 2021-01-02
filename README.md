@@ -95,6 +95,7 @@ I chose a custom-coded model — a standard Scikit-learn Logistic Regression for
 The parameters I used for the hyperparameter search are:
 
 Regularization Strength (C) with range 0.1 to 1.0 -- Inverse of regularization strength. Smaller values cause stronger regularization
+
 Max Iterations (max_iter) with values 50, 100, 150 and 200 -- Maximum number of iterations to converge.
 
 ![parameters](https://github.com/OREJAH/nd00333-capstone/blob/master/starter_file/hyperparameters.PNG)
