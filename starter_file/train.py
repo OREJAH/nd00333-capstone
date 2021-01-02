@@ -14,10 +14,10 @@ import joblib
 
 run = Run.get_context()
 
-workspace = run.experiment.workspace
+ws = run.experiment.workspace
 
     dataset_name = 'heart-failure'
-    dataset = Dataset.get_by_name(workspace=workspace, name=dataset_name)
+    dataset = Dataset.get_by_name(ws, name="heart-failure")
 
     df = dataset.to_pandas_dataframe()
 
