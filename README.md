@@ -90,7 +90,7 @@ TODO Remeber to provide screenshots of the RunDetails widget as well as a screen
 
 ### Hyperparameter Tuning
 
-I chose a custom-coded model — a standard Scikit-learn Logistic Regression for this experiment. Logistic Regression is a classification algorithm that is used to predict the probability of a categorical dependent variable. In the case of this capstone experiment, I chose the model because the decision boundary of logistic regression model is a linear binary classifier that seperate the two classes I want to predict using a hperdrive service.
+I chose a custom-coded model — a standard Scikit-learn Logistic Regression for this experiment. Logistic Regression is a classification algorithm that is used to predict the probability of a categorical dependent variable. In the case of this capstone experiment, I chose the model because the decision boundary of logistic regression model is a linear binary classifier that seperate the two classes I want to predict using a hyperdrive service.
 
 The parameters I used for the hyperparameter search are:
 
