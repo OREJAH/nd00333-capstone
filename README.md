@@ -62,7 +62,7 @@ This is an analyzed dataset containing the medical records of 299 heart failure 
 
 Cardiovascular diseases (CVDs) are the number 1 cause of death globally, taking an estimated 17.9 million lives each year, which accounts for 31% of all deaths worlwide. Heart failure is a common event caused by CVDs and this dataset contains 12 features that can be used to predict mortality by heart failure. Most cardiovascular diseases can be prevented by addressing behavioural risk factors such as tobacco use, unhealthy diet and obesity, physical inactivity and harmful use of alcohol using population-wide strategies. People with cardiovascular disease or who are at high cardiovascular risk (due to the presence of one or more risk factors such as hypertension, diabetes, hyperlipidaemia or already established disease) need early detection and management wherein a machine learning model can be of great help.
 
-The heart failure dataset was gotten from kaggle's repository.
+This heart failure dataset was gotten from kaggle's repository.
 
 ### Task
 
@@ -101,9 +101,19 @@ Max Iterations (max_iter) with values 50, 100, 150 and 200 -- Maximum number of 
 ![run completed](https://github.com/OREJAH/nd00333-capstone/blob/master/starter_file/hyperdrive%20widget.PNG)
 
 ### Results
-TODO: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
 
-TODO Remeber to provide screenshots of the RunDetails widget as well as a screenshot of the best model trained with it's parameters.
+The best hyperparameters for the hyperdrive model is:
+
+'Regularization Strength: ': 0.05203245378731211
+
+'Max iterations: ': 75
+
+This hyperparameters generated an accuracy of  0.7833333333333333 for the hyperdrive model.
+
+I could have improved the model through the use of Bayesian optimization algorithm that allows for the use of a different kind of statistical technique to improve the kind of hyperparameter. It picks samples based on how previous samples performed, so that new samples improve the primary metric and its search is potentially efficient.
+
+![hyperdrive_best_id](https://github.com/OREJAH/nd00333-capstone/blob/master/starter_file/HYPERDRIVE%20BEST_RUN_ID.PNG)
+
 
 Model Deployment
 TODO: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
