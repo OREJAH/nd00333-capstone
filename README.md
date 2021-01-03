@@ -182,4 +182,4 @@ After deployment was successful, a rest endpoint was generated, to query the end
 
 ### Screen Recording
 
- The link to screen recoreding is 
+ The link to screen recoreding is https://youtu.be/GUnZAbaA_lU
