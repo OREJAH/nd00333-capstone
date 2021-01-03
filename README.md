@@ -27,8 +27,6 @@
 ## . Model Deployment
 
 ## . Screen Recording
-
-## . Standout Suggestions
    
 ## Project overview
 
@@ -57,7 +55,7 @@ Note: If you choose to work with any other external dataset, before choosing a t
 
 ### Overview
 
-This is an analyzed dataset containing the medical records of 299 heart failure patients collected at the Faisalabad Institute of Cardiology and at the Allied Hospital in Faisalabad (Punjab, Pakistan), during April–December 2015. The patients consisted of 105 women and 194 men, and their ages range between 40 and 95 years old. All 299 patients had left ventricular systolic dysfunction and had previous heart failures that put them in classes III or IV of New York Heart Association (NYHA) classification of the stages of heart failure. As done by the original data curators, this dataset was represented as a table having 299 rows (patients) and 13 columns (features).
+This is an analyzed dataset containing the medical records of 299 heart failure patients collected at the Faisalabad Institute of Cardiology and at the Allied Hospital in Faisalabad (Punjab, Pakistan), during April–December 2015. The patients consisted of 105 women and 194 men, and their ages range between 40 and 95 years old.
 
 Cardiovascular diseases (CVDs) are the number 1 cause of death globally, taking an estimated 17.9 million lives each year, which accounts for 31% of all deaths worlwide. Heart failure is a common event caused by CVDs and this dataset contains 12 features that can be used to predict mortality by heart failure. Most cardiovascular diseases can be prevented by addressing behavioural risk factors such as tobacco use, unhealthy diet and obesity, physical inactivity and harmful use of alcohol using population-wide strategies. People with cardiovascular disease or who are at high cardiovascular risk (due to the presence of one or more risk factors such as hypertension, diabetes, hyperlipidaemia or already established disease) need early detection and management wherein a machine learning model can be of great help.
 
@@ -65,7 +63,7 @@ This heart failure dataset was gotten from kaggle's repository.
 
 ### Task
 
-With the kaggle heart failure dataset I'll be using the knowledge I have obtained from the Machine Learning Engineer with Microsoft Azure Nanodegree Program to create a machine learning model that can assess the likelihood of a death by heart failure event. This can be used to help hospitals in assessing the severity of patients with cardiovascular disease. In this project, I will create two models: one using Automated ML (denoted as AutoML from now on) and one customized model whose hyperparameters are tuned using HyperDrive.
+With the kaggle heart failure dataset I'll be using the knowledge I have obtained from the Machine Learning Engineer with Microsoft Azure Nanodegree Program to create a machine learning model that can assess the likelihood of a death by heart failure event. This can be used to help hospitals in assessing the severity of patients with cardiovascular disease. In this project, I will create two models: one using Automated ML and one customized model whose hyperparameters are tuned using HyperDrive.
 
 #### Features of the dataset
 
@@ -79,7 +77,7 @@ I downloaded the Heart Failure Dataset from kaggle as a csv file, then i registe
 
 ![access dataset](https://github.com/OREJAH/nd00333-capstone/blob/master/starter_file/heart%20failure%20dataset.PNG)
 
-### Automated ML
+## Automated ML
 
 The following code shows a basic example of creating an AutoMLConfig object and submitting an experiment for classification. I chose the automl settings below because I wanted to specify the experiment type as classification. The classification experiment will be carried out using AUC weighted as the primary metric, I find this metric useful for predicting binary classification models. The experiment timeout minutes is set to 30 minutes to control the use of resources and 5 cross-validation folds with the maximum number of iterations that would be executed simultaneously set to 4 to maximize usage. All of these settings defines the machine learning task.
 
@@ -136,7 +134,7 @@ It also had weights of:
 
 To improve the automl model, I can try applying other metrics, for example, the average precision score metrics that gives the weighted mean of precision with weights equal to class probability. It is a useful metric to compare how well models are ordering the predictions, without considering any specific decision threshold.
 
-### Hyperparameter Tuning
+## Hyperparameter Tuning
 
 I chose a custom-coded model — a standard Scikit-learn Logistic Regression for this experiment. Logistic Regression is a classification algorithm that is used to predict the probability of a categorical dependent variable. In the case of this capstone experiment, I chose the model because the decision boundary of logistic regression model is a linear binary classifier that seperate the two classes I want to predict using a hyperdrive service.
 
@@ -165,7 +163,7 @@ I could have improved the model through the use of Bayesian optimization algorit
 ![hyperdrive_best_id](https://github.com/OREJAH/nd00333-capstone/blob/master/starter_file/HYPERDRIVE%20BEST_RUN_ID.PNG)
 
 
-### Model Deployment
+## Model Deployment
 
 After training a model using Automated ML, the next thing is to deploy the best model as a webservice and test the model endpoint.
 
