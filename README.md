@@ -81,12 +81,50 @@ I downloaded the Heart Failure Dataset from kaggle as a csv file, then i registe
 ![access dataset](https://github.com/OREJAH/nd00333-capstone/blob/master/starter_file/heart%20failure%20dataset.PNG)
 
 ### Automated ML
-TODO: Give an overview of the automl settings and configuration you used for this experiment
+
+The following code shows a basic example of creating an AutoMLConfig object and submitting an experiment for classification. I chose the automl settings below because I wanted to specify the experiment type as classification. The classification experiment will be carried out using AUC weighted as the primary metric, I find this metric useful for predicting binary classification models. The experiment timeout minutes is set to 30 minutes to control the use of resources and 5 cross-validation folds with the maximum number of iterations that would be executed simultaneously set to 4 to maximize usage. All of these settings defines the machine learning task.
+
+The configuration object below contains and persists the parameters for configuring the experiment run, as well as the training data to be used at run time.
+
+automl_settings = {
+    "experiment_timeout_minutes": 30,
+    "max_concurrent_iterations": 5,
+    "primary_metric" : 'AUC_weighted',
+    "n_cross_validations": 5
+}
+automl_config = AutoMLConfig(compute_target=new_cluster,
+                             task = "classification",
+                             training_data=dataset,
+                             label_column_name="DEATH_EVENT", 
+                             enable_early_stopping= True,
+                             featurization= 'auto',
+                             enable_voting_ensemble= True,
+                             **automl_settings
+                            )
+
+![completed](https://github.com/OREJAH/nd00333-capstone/blob/master/starter_file/automl%20rundetails.PNG)
+![completed](https://github.com/OREJAH/nd00333-capstone/blob/master/starter_file/automl%20rundetails2.PNG)
+![models](https://github.com/OREJAH/nd00333-capstone/blob/master/starter_file/Models%20generated.PNG)
+
+
 
 ### Results
-TODO: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
 
-TODO Remeber to provide screenshots of the RunDetails widget as well as a screenshot of the best model trained with it's parameters.
+This automl experiment generated an AUC_weighted score of 0.9185826411960134 for the AutoML model.
+
+The parameters that VotingEnsemble used are:
+
+'RandomForest', 'XGBoostClassifier', 'ExtremeRandomTrees', 'GradientBoosting', 'XGBoostClassifier', 'RandomForest', 'ExtremeRandomTrees', 'RandomForest', 'RandomForest', 'RandomForest', 'RandomForest'
+
+It also had weights of: 
+
+ 'ensemble_weights': '0.06666666666666667, 0.13333333333333333, 0.2, 0.06666666666666667, 0.06666666666666667, 0.06666666666666667, 0.06666666666666667, 0.13333333333333333, 0.06666666666666667, 0.06666666666666667, 0.06666666666666667'
+ 
+![best model](https://github.com/OREJAH/nd00333-capstone/blob/master/starter_file/automl%20Best%20model.PNG)
+![metrics](https://github.com/OREJAH/nd00333-capstone/blob/master/starter_file/experiment%20metrics.PNG)
+![run id](https://github.com/OREJAH/nd00333-capstone/blob/master/starter_file/automl%20best%20runid.PNG)
+
+It is a useful metric to compare how well models are ordering the predictions, without considering any specific decision threshold.
 
 ### Hyperparameter Tuning
 
@@ -124,8 +162,4 @@ After training a model using Automated ML, the next thing is to deploy the best 
 TODO: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
 Screen Recording
-TODO Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-
-A working model
-Demo of the deployed model
-Demo of a sample request sent to the endpoint and its response
+ 
